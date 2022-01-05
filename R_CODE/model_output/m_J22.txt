@@ -1,0 +1,83 @@
+[1] "m_J22"
+# Intraclass Correlation Coefficient
+
+     Adjusted ICC: 0.469
+  Conditional ICC: 0.369
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: Log_Ca_Mg ~ 1 + kelvin + I(kelvin^-1) + mu + (1 | FIELD) + (1 |  
+    DepthID) + (1 | FORMATION) + (1 | BASIN) + (1 | LITHOLOGY) +  
+    (1 | AGE_VAL) + (1 | AGE_VAL_2)
+   Data: all_FULL_HEADER
+
+REML criterion at convergence: -3629
+
+Scaled residuals: 
+                   Min                     1Q                 Median 
+-4.4475374472661606262 -0.5092806260896862725 -0.0452886618708519470 
+                    3Q                    Max 
+ 0.4111225916650287360  5.0993115864241866930 
+
+Random effects:
+ Groups    Name        Variance                 Std.Dev.               
+ DepthID   (Intercept) 1.211767047738532450e-02 0.110080291048785500196
+ FIELD     (Intercept) 4.707195298113186870e-03 0.068609003039784705047
+ FORMATION (Intercept) 5.886347981037327870e-03 0.076722538937637668743
+ BASIN     (Intercept) 4.102092587818165562e-03 0.064047580655463995369
+ AGE_VAL   (Intercept) 3.023665838312654354e-04 0.017388691262750784194
+ AGE_VAL_2 (Intercept) 2.079498311383346128e-04 0.014420465704627386319
+ LITHOLOGY (Intercept) 9.606995208278643419e-05 0.009801528048359930967
+ Residual              3.099901447368537399e-02 0.176065369887679429306
+Number of obs: 10343, groups:  
+DepthID, 3296; FIELD, 2168; FORMATION, 1228; BASIN, 53; AGE_VAL, 35; AGE_VAL_2, 13; LITHOLOGY, 5
+
+Fixed effects:
+                              Estimate                Std. Error
+(Intercept)  -1.862805606078727028e+00  7.212072899845561880e-01
+kelvin        5.850367680501906108e-03  1.065444198755263142e-03
+I(kelvin^-1)  1.306420914603995413e+02  1.214232373311158568e+02
+mu           -7.135537599732048701e-03  1.488493340836279143e-03
+                                    df               t value   Pr(>|t|)    
+(Intercept)   3.078133161189476596e+03 -2.582899999999999974  0.0098431 ** 
+kelvin        3.103126173564284727e+03  5.491010000000000169 4.3186e-08 ***
+I(kelvin^-1)  3.093037607028797538e+03  1.075919999999999987  0.2820455    
+mu            5.396226299309378192e+03 -4.793800000000000061 1.6805e-06 ***
+---
+Signif. codes:  
+  0 ‘***’ 0.001000000000000000020817 ‘**’ 0.01000000000000000020817 ‘*’
+  0.05000000000000000277556 ‘.’ 0.1000000000000000055511 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr)                      kelvin                     
+kelvin      -0.996999999999999997335465                            
+I(kelvn^-1) -0.996999999999999997335465  0.988999999999999990230037
+mu          -0.017000000000000001221245  0.002000000000000000041633
+            I(^-1)                     
+kelvin                                 
+I(kelvn^-1)                            
+mu           0.021000000000000001304512
+fit warnings:
+Some predictor variables are on very different scales: consider rescaling
+convergence code: 0
+Model failed to converge with max|grad| = 0.00247074 (tol = 0.002, component 1)
+
+                          R2m                      R2c
+[1,] 0.2138447390197420749924 0.5828384521335305823442
+[1] "25 degc"
+                       1 
+-17.27965723968213396233 
+                     upr
+1 -17.626072357246943767
+                       lwr
+1 -16.93692663167890444242
+                        upr
+1 -0.6891457255680393245711
+[1] "200 degc"
+                       1 
+-23.27940722507111104278 
+                       upr
+1 -23.63409101188351257861
+                       lwr
+1 -22.92344875419221850166
+                        upr
+1 -0.7106422576912940769489
